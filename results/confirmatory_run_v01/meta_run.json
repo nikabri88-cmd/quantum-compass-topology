@@ -1,0 +1,71 @@
+{
+ "code_sha256": "2352aefe0fe5974732c318b365f4fb5477ffc47fb78b12748bca2515465829c4",
+ "analysis_sha256": "d8ddb7d7fb60458f67ed8ca387b441204af44ba8c7391a56a00da851c5f5c9de",
+ "tests_sha256": "a5fabd0e3a2cac3ee0b9f72c86dc3ab117f69020c8d69a529ed5d5dd9e98197e",
+ "params": {
+  "B0_mT": 0.05,
+  "k_rec": 1000000.0,
+  "J": 0.0,
+  "D": 0.0,
+  "L_sh": 10,
+  "n_fit": 1000,
+  "eye_azimuth_deg": 60.0,
+  "fov_half_deg": 80.0,
+  "n_receptors": 400,
+  "jitter_deg": 10.0,
+  "n_neurons": 100,
+  "rf_deg": 15.0,
+  "gain": 2.0,
+  "bias_sd": 0.5,
+  "noise": 0.5,
+  "n_dirs": 600,
+  "inclination_deg": 66.0,
+  "pca_dim": 6,
+  "smooth_k": 1,
+  "knn": 10,
+  "density_drop": 0.0,
+  "n_perm": 200,
+  "n_shuffles": 2,
+  "rel_factor": 0.4,
+  "null_factor": 4.0
+ },
+ "numpy": "2.5.3",
+ "scipy": "1.18.1",
+ "python": "3.13.18",
+ "radicalpy": "1.0.9",
+ "ripser": "0.6.15",
+ "mode": "run",
+ "blas_threads": [
+  1
+ ],
+ "blas_libraries": [
+  {
+   "internal_api": "openblas",
+   "version": "0.3.34.106.0",
+   "architecture": "SkylakeX",
+   "num_threads": 1,
+   "filepath": "/usr/local/lib/python3.13/dist-packages/numpy.libs/libscipy_openblas64_-f48b354e.so"
+  },
+  {
+   "internal_api": "openblas",
+   "version": "0.3.31.dev",
+   "architecture": "SkylakeX",
+   "num_threads": 1,
+   "filepath": "/usr/local/lib/python3.13/dist-packages/scipy.libs/libscipy_openblas-5f890258.so"
+  }
+ ],
+ "physics_sha256": "647bc0ccb1312991a1b772193cac39f4ced1481c591422c50659bb822a3100c5",
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "seconds": 813.1
+}

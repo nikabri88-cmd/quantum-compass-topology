@@ -1,0 +1,6 @@
+seed 9202 done in 241s
+seed 9201 done in 242s
+analyze exit 0
+all keys present: True | run valid: True | provenance ok: True [] | confirmatory: False | I5 problems: 0 | design points: 18 | atlas keys: ['klein', 'point', 'ring', 'ring_yaw_inc0', 'ring_yaw_inc66', 'rp2', 'sphere', 'torus'] | gate rings carry median_snr: True | blas [1] | code 2352aefe0fe5 | analysis d8ddb7d7fb60 | seconds 241.9
+stderr bytes: 0
+throwaway outputs deleted unseen

@@ -1,0 +1,382 @@
+{
+ "code_sha256": "b4a7800a2f6440d9698273c6d76461d81dffb038906597d216e8f692877d9f2c",
+ "analysis_sha256": null,
+ "tests_sha256": null,
+ "params": {
+  "B0_mT": 0.05,
+  "k_rec": 1000000.0,
+  "J": 0.0,
+  "D": 0.0,
+  "L_sh": 10,
+  "n_fit": 1000,
+  "eye_azimuth_deg": 60.0,
+  "fov_half_deg": 80.0,
+  "n_receptors": 400,
+  "jitter_deg": 10.0,
+  "n_neurons": 100,
+  "rf_deg": 15.0,
+  "gain": 2.0,
+  "bias_sd": 0.5,
+  "noise": 0.5,
+  "n_dirs": 600,
+  "inclination_deg": 66.0,
+  "pca_dim": 6,
+  "knn": 10,
+  "density_drop": 0.1,
+  "n_perm": 200,
+  "n_shuffles": 2,
+  "bar_factor": 1.5
+ },
+ "numpy": "2.5.3",
+ "scipy": "1.18.1",
+ "python": "3.13.18",
+ "radicalpy": "1.0.9",
+ "ripser": "0.6.15",
+ "mode": "calibrate",
+ "seeds": [
+  1001,
+  1002,
+  1003,
+  1004,
+  1005,
+  1006,
+  1007,
+  1008,
+  1009,
+  1010
+ ],
+ "atlas_accuracy": {
+  "1.0": {
+   "point": 0.0,
+   "ring": 0.0,
+   "sphere": 0.0,
+   "torus": 0.0,
+   "rp2": 0.0,
+   "klein": 0.0
+  },
+  "1.25": {
+   "point": 0.0,
+   "ring": 0.1,
+   "sphere": 0.0,
+   "torus": 0.0,
+   "rp2": 0.0,
+   "klein": 0.0
+  },
+  "1.5": {
+   "point": 0.0,
+   "ring": 0.3,
+   "sphere": 0.0,
+   "torus": 0.0,
+   "rp2": 0.0,
+   "klein": 0.0
+  },
+  "2.0": {
+   "point": 0.1,
+   "ring": 0.8,
+   "sphere": 0.0,
+   "torus": 0.0,
+   "rp2": 0.0,
+   "klein": 0.0
+  }
+ },
+ "atlas_labels": {
+  "1.0": {
+   "point": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "ring": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "torus",
+    "other",
+    "torus"
+   ],
+   "sphere": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "torus": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "rp2": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "klein": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ]
+  },
+  "1.25": {
+   "point": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "ring": [
+    "other",
+    "other",
+    "ring",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "sphere": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "torus": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "rp2": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "klein": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ]
+  },
+  "1.5": {
+   "point": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "ring": [
+    "other",
+    "other",
+    "ring",
+    "other",
+    "ring",
+    "ring",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "sphere": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "torus": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "rp2": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "klein": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ]
+  },
+  "2.0": {
+   "point": [
+    "other",
+    "other",
+    "other",
+    "sphere",
+    "other",
+    "sphere",
+    "other",
+    "ring",
+    "point",
+    "torus"
+   ],
+   "ring": [
+    "other",
+    "ring",
+    "ring",
+    "ring",
+    "ring",
+    "ring",
+    "ring",
+    "other",
+    "ring",
+    "ring"
+   ],
+   "sphere": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "torus": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "rp2": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ],
+   "klein": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ]
+  }
+ },
+ "chosen_bar_factor": null,
+ "seconds": 239.4
+}

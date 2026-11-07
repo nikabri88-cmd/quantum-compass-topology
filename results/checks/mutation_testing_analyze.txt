@@ -1,0 +1,87 @@
+NEED7                    killed  by: needed(): 8 of 10, 8 of 9, 4 of 5, 2 of 2 (+19)
+NEED9                    killed  by: needed(): 8 of 10, 8 of 9, 4 of 5, 2 of 2 (+8)
+hits>need                killed  by: H1: projective plane in 8 of 10 -> met (+3)
+gate>need                killed  by: H1: atlas RP2 recognised in 8 of 10 -> gate open, met (+3)
+H3_or                    killed  by: H3: equator ring in 7 of 10 -> not met (+2)
+H3_testable_first        killed  by: H3: inclination-66 gate closed and the equator clause testable but failed -> not met
+H3_only66                killed  by: H3: equator ring in 7 of 10 -> not met (+3)
+H3_gate_std_ring         killed  by: H3: gate ring of inclination 66 in 7 of 10 -> not testable, with a reason (+4)
+H3_gates_swapped         killed  by: H3: inclination-66 gate closed and the equator clause testable but failed -> not met (+1)
+H3_why_empty             killed  by: H3: gate ring of inclination 66 in 7 of 10 -> not testable, with a reason
+H3_why_always            killed  by: H3: inclination-66 gate closed and the equator clause testable but failed -> not met
+gate_target_torus        killed  by: analysis expects the conditions, atlas keys, gate targets and design keys written out here
+atlas_target_torus       killed  by: analysis expects the conditions, atlas keys, gate targets and design keys written out here (+19)
+Q1_with_gates            killed  by: Q1 counts only the six atlas shapes: a gate ring in 7 of 10 -> Q1 met, H3 not testable
+blas_none_ok             killed  by: run folder: BLAS thread count unknown -> invalid, not confirmatory
+blas_any_one             killed  by: run folder: BLAS libraries on one and two threads -> invalid, not confirmatory (+1)
+null_only                killed  by: run folder: the null factor alone differs -> invalid, not confirmatory
+rel_only                 killed  by: run folder: the share factor alone differs -> invalid, not confirmatory
+load_unreadable_skip     killed  by: run folder: an unreadable seed file -> invalid, I5 bug
+main_no_provisional      killed  by: main(): a hash mismatch prints RUN INVALID and marks the verdicts provisional
+H4_eq_upper              killed  by: H4: equator t-interval low 0.397 (normal, 90% or ddof 0 would pass) -> not met (+1)
+H4_66_lower              killed  by: H4: inclination-66 t-interval high 0.0505 (normal, 90% or ddof 0 would pass) -> not met (+1)
+H4_eq_mean               killed  by: H4: equator t-interval low 0.397 (normal, 90% or ddof 0 would pass) -> not met (+1)
+H4_66_mean               killed  by: H4: inclination-66 t-interval high 0.0505 (normal, 90% or ddof 0 would pass) -> not met (+1)
+H4_or                    killed  by: H4: equator 0.399 in every seed -> not met (+5)
+EQ_MIN_0.45              killed  by: H4: equator 0.401 in every seed -> met (+1)
+EQ_MIN_0.32              killed  by: H4: equator 0.399 in every seed -> not met (+1)
+MAX66_0.03               killed  by: H4: inclination 66 at 0.049 in every seed -> met (+1)
+MAX66_0.065              killed  by: H4: inclination 66 at 0.051 in every seed -> not met (+1)
+CI_level_0.90            killed  by: H4: equator t-interval low 0.397 (normal, 90% or ddof 0 would pass) -> not met (+1)
+CI_level_0.99            killed  by: H4: equator t-interval low 0.417 (a 99% interval would fail) -> met (+1)
+CI_ddof0                 killed  by: H4: equator t-interval low 0.397 (normal, 90% or ddof 0 would pass) -> not met (+1)
+CI_normal                killed  by: H4: equator t-interval low 0.397 (normal, 90% or ddof 0 would pass) -> not met (+1)
+needed_const             killed  by: needed(): 8 of 10, 8 of 9, 4 of 5, 2 of 2 (+1)
+needed_floor             killed  by: needed(): 8 of 10, 8 of 9, 4 of 5, 2 of 2 (+1)
+I1_phys_1e-7             killed  by: I1: physics antipodal 2e-12 -> bug
+I1_pop_1e-7              killed  by: I1: population antipodal 2e-9 in seed 5 -> bug
+I1_or                    killed  by: I1: physics antipodal 2e-12 -> bug (+3)
+I1_any                   killed  by: I1: population antipodal 2e-9 in seed 5 -> bug (+1)
+I2_1e-7                  killed  by: I2: odd power 2e-10 -> bug
+I3_radicalpy_5e-3        killed  by: I3: time-domain difference 2e-6 -> bug
+I3_resolvent_1e-6        killed  by: I3: resolvent difference 2e-10 -> bug
+I3_zeeman_1e-6           killed  by: I3: Cartesian Zeeman difference 2e-12 -> bug
+I3_any                   killed  by: I3: time-domain difference 2e-6 -> bug (+3)
+within_missing_ok        killed  by: Q3: out-of-sample residual missing -> not met (+4)
+is_num_nan_ok            killed  by: I1 and I5: population antipodal NaN in seed 5 (not the first) -> bug
+all_finite_true          killed  by: I5: NaN bar -> bug (+1)
+I5_finite_default        killed  by: I5: 'finite' flag missing -> bug
+I5_no_topo_keys          killed (crash rc=1)
+I5_no_label              killed  by: I5: unknown label -> bug
+I5_no_finite_bars        killed  by: I5: NaN bar -> bug (+1)
+I5_no_yaw                killed  by: I5: heading confusion NaN -> bug (+1)
+I5_skip_gate_rings       killed  by: I5: non-finite gate ring population -> bug
+I5_skip_design           killed (crash rc=1)
+I5_skip_last_cond        killed (crash rc=1)
+I5_no_antip              killed  by: I1 and I5: population antipodal NaN in seed 5 (not the first) -> bug (+1)
+I5_no_early_return       killed  by: I5: non-finite condition population -> bug, hypotheses not testable (+4)
+I5_extra_ignored         killed  by: I5: a load problem passed in -> bug (+2)
+I5_no_seeds_ok           killed  by: I5: no seeds -> bug, hypotheses not testable
+Q1_hyp_only              killed  by: Q1: atlas torus in 7 of 10 -> Q1 not met (+1)
+Q1_any                   killed  by: H3 is gated by the noise-matched rings: atlas ring and point in 7 of 10 -> H3 met, Q1 not met (+6)
+Q2_0.006                 killed  by: Q2: anisotropy 0.99% -> not met
+Q3_0.015                 killed  by: Q3: out-of-sample residual 1.01% of SD -> not met
+Q3_in_sample             killed  by: Q3: out-of-sample residual 1.01% of SD -> not met (+2)
+H1_cond_d025             killed  by: H1: projective plane in 7 of 10 -> not met (+2)
+H1_gate_also_ring        killed  by: H1 and H2 are gated only by their own shape: atlas ring and torus in 7 of 10 -> H1, H2 met
+H2_gate_also_ring        killed  by: H1 and H2 are gated only by their own shape: atlas ring and torus in 7 of 10 -> H1, H2 met
+run_valid_true           killed  by: run folder: metadata missing -> invalid, not confirmatory (+16)
+run_valid_no_prov        killed  by: run folder: metadata missing -> invalid, not confirmatory (+12)
+INVARIANTS_no_I5         killed  by: run folder: a seed file named after another seed -> invalid, not confirmatory (+1)
+confirmatory_any_seeds   killed  by: run folder: seeds 1-9 -> valid, not confirmatory (+3)
+prov_no_code             killed  by: run folder: code hash differs -> invalid, not confirmatory (+1)
+prov_no_analysis         killed  by: run folder: analysis hash differs -> invalid, not confirmatory
+prov_no_physics          killed  by: run folder: physics hash differs -> invalid, not confirmatory
+prov_no_factors          killed  by: run folder: threshold factors differ -> invalid, not confirmatory (+2)
+prov_no_blas             killed  by: run folder: two BLAS threads -> invalid, not confirmatory (+2)
+prov_no_seeds            killed  by: run folder: seed 11 started but its file is missing -> invalid, not confirmatory
+prov_no_mode             killed  by: run folder: metadata from another mode -> invalid, not confirmatory
+load_no_name_check       killed  by: run folder: a seed file named after another seed -> invalid, not confirmatory
+E1_wrong_key             killed  by: E1: dose 0.75 counted per label
+E2_drop                  killed  by: E2: all 18 design points counted
+E3_inverse               killed  by: E3: bar margin is the longest bar over its threshold (2.0 / 0.5)
+E3_no_gate               killed (crash rc=1)
+main_no_notconf          killed  by: main(): pipeline-test seeds print NOT CONFIRMATORY
+main_no_invalid          killed  by: main(): a hash mismatch prints RUN INVALID and marks the verdicts provisional
+
+85 mutations, 85 killed, survivors or bad patterns: []

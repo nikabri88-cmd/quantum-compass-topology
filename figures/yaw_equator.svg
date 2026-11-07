@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="320" viewBox="0 0 680 320" role="img" font-family="Helvetica, Arial, sans-serif">
+<title>Yaw rotations at inclination 66 degrees and at the magnetic equator</title>
+<desc>At inclination 66 degrees the field traces a small circle near the lower pole as the head turns, and headings psi and psi plus 180 degrees stay distinct: no 180-degree errors. At the equator the field traces the equator, headings psi and psi plus 180 degrees are opposite directions, the radical pair glues them, and a nearest-neighbour decoder makes 180-degree errors in 49 percent of cases.</desc>
+<rect x="0" y="0" width="680" height="320" fill="#FFFFFF"/>
+<circle cx="190" cy="110" r="66" fill="none" stroke="#888780" stroke-width="0.8"/>
+<ellipse cx="190" cy="50" rx="27" ry="7" fill="none" stroke="#534AB7" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+<ellipse cx="190" cy="170" rx="27" ry="7" fill="none" stroke="#534AB7" stroke-width="1.5"/>
+<circle cx="163" cy="170" r="4" fill="#534AB7"/><circle cx="217" cy="170" r="4" fill="#534AB7"/>
+<text x="156" y="196" font-size="12" fill="#5F5E5A" text-anchor="end">ψ</text>
+<text x="224" y="196" font-size="12" fill="#5F5E5A">ψ + 180°</text>
+<circle cx="490" cy="110" r="66" fill="none" stroke="#888780" stroke-width="0.8"/>
+<ellipse cx="490" cy="110" rx="66" ry="16" fill="none" stroke="#534AB7" stroke-width="1.5"/>
+<line x1="428" y1="110" x2="552" y2="110" stroke="#534AB7" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="424" cy="110" r="4" fill="#534AB7"/><circle cx="556" cy="110" r="4" fill="#534AB7"/>
+<text x="414" y="114" font-size="12" fill="#5F5E5A" text-anchor="end">ψ</text>
+<text x="566" y="114" font-size="12" fill="#5F5E5A">ψ + 180°</text>
+<rect x="70" y="214" width="240" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+<text x="190" y="237" font-size="14" font-weight="bold" fill="#3C3489" text-anchor="middle">Inclination 66°</text>
+<text x="190" y="257" font-size="12" fill="#534AB7" text-anchor="middle">180° errors: 0%</text>
+<rect x="370" y="214" width="240" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+<text x="490" y="237" font-size="14" font-weight="bold" fill="#3C3489" text-anchor="middle">Equator, inclination 0°</text>
+<text x="490" y="257" font-size="12" fill="#534AB7" text-anchor="middle">180° errors: 49%</text>
+<text x="340" y="300" font-size="12" fill="#5F5E5A" text-anchor="middle">Solid: path of the field as the head turns. Dashed: directions the radical pair glues to it</text>
+</svg>

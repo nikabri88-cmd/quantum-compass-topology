@@ -1,0 +1,417 @@
+{
+ "I1": {
+  "what": "the radical-pair yield and the noiseless population are identical for n and -n",
+  "physics_max_diff": 7.771561172376096e-16,
+  "population_per_seed": [
+   5.10702591327572e-14,
+   4.929390229335695e-14,
+   4.884981308350689e-14,
+   4.884981308350689e-14,
+   4.8405723873656825e-14,
+   4.8405723873656825e-14,
+   4.884981308350689e-14,
+   4.929390229335695e-14,
+   4.796163466380676e-14,
+   4.884981308350689e-14
+  ],
+  "verdict": "ok"
+ },
+ "I2": {
+  "what": "the spherical-harmonic fit adds no odd degrees (share of odd degrees in the anisotropic power)",
+  "odd_power_fraction": 3.3360388218473894e-29,
+  "verdict": "ok"
+ },
+ "I3": {
+  "what": "the exact yield agrees with a time-domain propagation on RadicalPy's propagator and with a resolvent solution, and the Zeeman term agrees with its Cartesian form",
+  "radicalpy_max_diff": 2.0118560428716847e-08,
+  "resolvent_max_diff": 8.43769498715119e-15,
+  "zeeman_cartesian_max_rel_diff": 2.686050178413143e-16,
+  "clauses": {
+   "radicalpy": true,
+   "resolvent": true,
+   "zeeman": true
+  },
+  "verdict": "ok"
+ },
+ "I4": {
+  "what": "noise above the threshold leaves the population identical to the intact compass",
+  "mismatches": 0,
+  "verdict": "ok"
+ },
+ "I5": {
+  "what": "every population is finite and every record is present and complete",
+  "problems": 0,
+  "examples": [],
+  "verdict": "ok"
+ },
+ "Q2": {
+  "what": "the compass works: relative anisotropy of the singlet yield >= 1%",
+  "relative_anisotropy": 0.2084416364331026,
+  "verdict": "met"
+ },
+ "Q3": {
+  "what": "the spherical-harmonic fit reproduces the yield at 400 directions outside the fit grid within 1% of its SD",
+  "fit_oos_rms_over_sd": 0.002429201738966761,
+  "verdict": "met"
+ },
+ "Q1": {
+  "what": "the pipeline recognises every atlas shape in at least 8 of 10 seeds",
+  "atlas": {
+   "point": {
+    "correct": 10,
+    "labels": {
+     "point": 10
+    }
+   },
+   "ring": {
+    "correct": 10,
+    "labels": {
+     "ring": 10
+    }
+   },
+   "sphere": {
+    "correct": 10,
+    "labels": {
+     "sphere": 10
+    }
+   },
+   "torus": {
+    "correct": 10,
+    "labels": {
+     "torus": 10
+    }
+   },
+   "rp2": {
+    "correct": 10,
+    "labels": {
+     "rp2": 10
+    }
+   },
+   "klein": {
+    "correct": 8,
+    "labels": {
+     "klein": 8,
+     "other": 2
+    }
+   }
+  },
+  "seeds_needed": 8,
+  "verdict": "met"
+ },
+ "H1": {
+  "condition": "rp_d0",
+  "target": "rp2",
+  "hits": 10,
+  "seeds_needed": 8,
+  "labels": {
+   "rp2": 10
+  },
+  "gates": [
+   "rp2"
+  ],
+  "not_testable_because": [],
+  "verdict": "met"
+ },
+ "H2": {
+  "condition": "polar",
+  "target": "sphere",
+  "hits": 10,
+  "seeds_needed": 8,
+  "labels": {
+   "sphere": 10
+  },
+  "gates": [
+   "sphere"
+  ],
+  "not_testable_because": [],
+  "verdict": "met"
+ },
+ "H3": {
+  "inclination_66": {
+   "condition": "yaw_inc66",
+   "target": "ring",
+   "hits": 10,
+   "seeds_needed": 8,
+   "labels": {
+    "ring": 10
+   },
+   "gates": [
+    "ring_yaw_inc66"
+   ],
+   "not_testable_because": [],
+   "verdict": "met"
+  },
+  "equator": {
+   "condition": "yaw_inc0",
+   "target": "ring",
+   "hits": 10,
+   "seeds_needed": 8,
+   "labels": {
+    "ring": 10
+   },
+   "gates": [
+    "ring_yaw_inc0"
+   ],
+   "not_testable_because": [],
+   "verdict": "met"
+  },
+  "gate_rings": {
+   "ring_yaw_inc66": {
+    "correct": 10,
+    "labels": {
+     "ring": 10
+    },
+    "median_snr": [
+     1.3322688663933056,
+     1.3630396942921017,
+     1.5242185408923539,
+     1.2359872275732455,
+     1.2270161690521633,
+     1.5451987639682128,
+     1.6661894728175133,
+     1.332825697296654,
+     1.4791838927875418,
+     1.183250043819573
+    ]
+   },
+   "ring_yaw_inc0": {
+    "correct": 10,
+    "labels": {
+     "ring": 10
+    },
+    "median_snr": [
+     1.5526358768290995,
+     1.607149887077497,
+     1.6016469472032697,
+     1.6163285021178933,
+     1.693435853638503,
+     1.5982219445406662,
+     1.6149248263405085,
+     1.6219556149548886,
+     1.5734199514869305,
+     1.5964805881792599
+    ]
+   }
+  },
+  "not_testable_because": [],
+  "verdict": "met"
+ },
+ "H4": {
+  "confusion_equator": {
+   "mean": 0.4926666666666667,
+   "ci": [
+    0.4730098130701261,
+    0.5123235202632074
+   ],
+   "per_seed": [
+    0.49333333333333335,
+    0.51,
+    0.5,
+    0.48333333333333334,
+    0.4766666666666667,
+    0.48333333333333334,
+    0.5366666666666666,
+    0.45,
+    0.4633333333333333,
+    0.53
+   ]
+  },
+  "confusion_66": {
+   "mean": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "per_seed": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "clauses": {
+   "equator_ci95_low_at_least_0_40": true,
+   "inc66_ci95_high_at_most_0_05": true
+  },
+  "verdict": "met"
+ },
+ "E1_rf_dose": {
+  "d0": {
+   "rp2": 10
+  },
+  "d0.25": {
+   "rp2": 10
+  },
+  "d0.5": {
+   "other": 3,
+   "rp2": 7
+  },
+  "d0.75": {
+   "point": 10
+  },
+  "d1": {
+   "point": 10
+  }
+ },
+ "E2_design": {
+  "N25_noise0.25_rp": {
+   "other": 4,
+   "rp2": 6
+  },
+  "N25_noise0.25_polar": {
+   "sphere": 10
+  },
+  "N25_noise0.5_rp": {
+   "other": 4,
+   "point": 6
+  },
+  "N25_noise0.5_polar": {
+   "point": 1,
+   "sphere": 9
+  },
+  "N25_noise1_rp": {
+   "point": 10
+  },
+  "N25_noise1_polar": {
+   "point": 10
+  },
+  "N50_noise0.25_rp": {
+   "rp2": 10
+  },
+  "N50_noise0.25_polar": {
+   "sphere": 10
+  },
+  "N50_noise0.5_rp": {
+   "rp2": 10
+  },
+  "N50_noise0.5_polar": {
+   "sphere": 10
+  },
+  "N50_noise1_rp": {
+   "point": 10
+  },
+  "N50_noise1_polar": {
+   "point": 5,
+   "sphere": 5
+  },
+  "N100_noise0.25_rp": {
+   "rp2": 10
+  },
+  "N100_noise0.25_polar": {
+   "sphere": 10
+  },
+  "N100_noise0.5_rp": {
+   "rp2": 10
+  },
+  "N100_noise0.5_polar": {
+   "sphere": 10
+  },
+  "N100_noise1_rp": {
+   "other": 5,
+   "rp2": 5
+  },
+  "N100_noise1_polar": {
+   "sphere": 10
+  }
+ },
+ "E3_bar_margins": {
+  "rp_d0": {
+   "Z2_H1": 2.1017530504791146,
+   "Z2_H2": 2.120008524135116,
+   "Z3_H1": 0.7811135461396687,
+   "Z3_H2": 0.575157116876703
+  },
+  "polar": {
+   "Z2_H1": 0.5741871310862645,
+   "Z2_H2": 2.5,
+   "Z3_H1": 0.5741871310862645,
+   "Z3_H2": 2.5
+  },
+  "yaw_inc66": {
+   "Z2_H1": 2.1511604726513127,
+   "Z2_H2": 0.109689275907531,
+   "Z3_H1": 2.1511604726513127,
+   "Z3_H2": 0.109689275907531
+  },
+  "yaw_inc0": {
+   "Z2_H1": 2.469937621082809,
+   "Z2_H2": 0.10033384407793605,
+   "Z3_H1": 2.469937621082809,
+   "Z3_H2": 0.10033384407793605
+  },
+  "atlas_point": {
+   "Z2_H1": 0.5289306698781391,
+   "Z2_H2": 0.45694103566020505,
+   "Z3_H1": 0.5289306698781391,
+   "Z3_H2": 0.45694103566020505
+  },
+  "atlas_ring": {
+   "Z2_H1": 2.4999999999999996,
+   "Z2_H2": 0.08895752688413958,
+   "Z3_H1": 2.5,
+   "Z3_H2": 0.08895752688413958
+  },
+  "atlas_sphere": {
+   "Z2_H1": 0.5872856419437359,
+   "Z2_H2": 2.5,
+   "Z3_H1": 0.5872856419437359,
+   "Z3_H2": 2.5
+  },
+  "atlas_torus": {
+   "Z2_H1": 1.8815641307984006,
+   "Z2_H2": 1.85832603108641,
+   "Z3_H1": 1.8815641307984006,
+   "Z3_H2": 1.85832603108641
+  },
+  "atlas_rp2": {
+   "Z2_H1": 2.2920265785528,
+   "Z2_H2": 1.982799203858984,
+   "Z3_H1": 0.8239247061203889,
+   "Z3_H2": 0.3984622433600735
+  },
+  "atlas_klein": {
+   "Z2_H1": 1.6019786408783148,
+   "Z2_H2": 2.1083369346631216,
+   "Z3_H1": 1.439636967403084,
+   "Z3_H2": 1.1204352545640845
+  },
+  "atlas_ring_yaw_inc66": {
+   "Z2_H1": 1.8202026805124705,
+   "Z2_H2": 0.13915292792817846,
+   "Z3_H1": 1.8202026805124705,
+   "Z3_H2": 0.13915292792817846
+  },
+  "atlas_ring_yaw_inc0": {
+   "Z2_H1": 2.1614292304855063,
+   "Z2_H2": 0.0963148093291682,
+   "Z3_H1": 2.1614292304855063,
+   "Z3_H2": 0.0963148093291682
+  }
+ },
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "n_seeds": 10,
+ "physics_sha256": "647bc0ccb1312991a1b772193cac39f4ced1481c591422c50659bb822a3100c5",
+ "provenance": {
+  "ok": true,
+  "problems": []
+ },
+ "run_valid": true,
+ "confirmatory": true
+}

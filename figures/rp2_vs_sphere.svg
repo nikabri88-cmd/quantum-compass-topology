@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="330" viewBox="0 0 680 330" role="img" font-family="Helvetica, Arial, sans-serif">
+<title>Shape of population activity for two compasses</title>
+<desc>A radical pair answers the field n and the reversed field -n in the same way, so the neural population lies on the real projective plane RP2. A polarity-sensitive sensor read by the same eyes and neurons tells n from -n, so the population lies on a sphere. Both outcomes held in 10 of 10 simulated birds.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="0" y="0" width="680" height="330" fill="#FFFFFF"/>
+<circle cx="100" cy="95" r="44" fill="none" stroke="#888780" stroke-width="0.8"/>
+<circle cx="131" cy="64" r="4" fill="#534AB7"/><circle cx="69" cy="126" r="4" fill="#534AB7"/>
+<text x="140" y="58" font-size="12" fill="#5F5E5A">n</text><text x="62" y="146" font-size="12" fill="#5F5E5A" text-anchor="end">−n</text>
+<line x1="152" y1="95" x2="186" y2="95" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="190" y="67" width="170" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+<text x="275" y="90" font-size="14" font-weight="bold" fill="#3C3489" text-anchor="middle">Radical pair</text>
+<text x="275" y="110" font-size="12" fill="#534AB7" text-anchor="middle">Φ(n) = Φ(−n)</text>
+<line x1="364" y1="95" x2="398" y2="95" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#arrow)"/>
+<circle cx="440" cy="95" r="36" fill="none" stroke="#534AB7" stroke-width="1"/>
+<line x1="417" y1="118" x2="463" y2="72" stroke="#534AB7" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="465" cy="70" r="4" fill="#534AB7"/><circle cx="415" cy="120" r="4" fill="#534AB7"/>
+<line x1="482" y1="95" x2="506" y2="95" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="510" y="67" width="130" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+<text x="575" y="90" font-size="14" font-weight="bold" fill="#3C3489" text-anchor="middle">RP²</text>
+<text x="575" y="110" font-size="12" fill="#534AB7" text-anchor="middle">10 of 10 birds</text>
+<circle cx="100" cy="225" r="44" fill="none" stroke="#888780" stroke-width="0.8"/>
+<circle cx="131" cy="194" r="4" fill="#0F6E56"/><circle cx="69" cy="256" r="4" fill="#0F6E56"/>
+<text x="140" y="188" font-size="12" fill="#5F5E5A">n</text><text x="62" y="276" font-size="12" fill="#5F5E5A" text-anchor="end">−n</text>
+<line x1="152" y1="225" x2="186" y2="225" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="190" y="197" width="170" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<text x="275" y="220" font-size="14" font-weight="bold" fill="#085041" text-anchor="middle">Polar sensor</text>
+<text x="275" y="240" font-size="12" fill="#0F6E56" text-anchor="middle">signal ∝ u · n</text>
+<line x1="364" y1="225" x2="398" y2="225" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#arrow)"/>
+<circle cx="440" cy="225" r="36" fill="none" stroke="#0F6E56" stroke-width="1"/>
+<circle cx="465" cy="200" r="4" fill="#0F6E56"/><circle cx="415" cy="250" r="4" fill="#0F6E56"/>
+<line x1="482" y1="225" x2="506" y2="225" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="510" y="197" width="130" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<text x="575" y="220" font-size="14" font-weight="bold" fill="#085041" text-anchor="middle">Sphere S²</text>
+<text x="575" y="240" font-size="12" fill="#0F6E56" text-anchor="middle">10 of 10 birds</text>
+<text x="340" y="306" font-size="12" fill="#5F5E5A" text-anchor="middle">Dashed line: n and −n are glued into one state of the population</text>
+</svg>

@@ -1,0 +1,88 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "MAG-S2: the shape of the quantum compass signal"
+type: software
+version: "0.1.0"
+repository-code: "https://github.com/nikabri88-cmd/quantum-compass-topology"
+authors:
+  - family-names: Ryzhkova
+    given-names: Julia
+    affiliation: Siriona
+    orcid: "https://orcid.org/0009-0005-4194-6059"
+date-released: 2026-11-07
+license: MIT
+abstract: >-
+  Pre-registered simulation study of the shape of neural population activity that reads a radical-pair
+  (cryptochrome) magnetic compass. The singlet yield of a radical pair is the same for a field and for the reversed
+  field, so the population lies on the real projective plane RP2, while a polarity-sensitive control read by the
+  same eyes and neurons gives a sphere. Persistent homology with Z2 and Z3 coefficients tells the two shapes apart.
+  In the confirmatory run on ten simulated birds all invariants held and all expectations and hypotheses were met:
+  the intact compass was labelled RP2 in 10 of 10 birds, the polar control a sphere in 10 of 10, head rotations about
+  the vertical axis a ring in 10 of 10 at inclination 66 degrees and at the magnetic equator, and a heading decoder
+  confused headings 180 degrees apart at the equator and kept them apart at inclination 66 degrees. Code is released
+  under MIT; text, figures, the protocol and the results are released under CC BY 4.0.
+keywords:
+  - magnetoreception
+  - radical pair
+  - cryptochrome
+  - persistent homology
+  - topological data analysis
+  - neural manifold
+  - projective plane
+  - pre-registration
+  - simulation
+references:
+  - type: article
+    title: "Upper bound for broadband radiofrequency field disruption of magnetic compass orientation in night-migratory songbirds"
+    authors:
+      - family-names: Leberecht
+        given-names: Bo
+      - name: "et al."
+    journal: "Proceedings of the National Academy of Sciences"
+    volume: 120
+    doi: "10.1073/pnas.2301153120"
+    year: 2023
+  - type: article
+    title: "Visual but not trigeminal mediation of magnetic compass information in a migratory bird"
+    authors:
+      - family-names: Zapka
+        given-names: Manuela
+      - name: "et al."
+    journal: "Nature"
+    volume: 461
+    doi: "10.1038/nature08528"
+    year: 2009
+  - type: article
+    title: "A global screen for magnetically induced neuronal activity in the pigeon brain"
+    authors:
+      - family-names: Nordmann
+        given-names: Gregory C.
+      - family-names: Balay
+        given-names: Spencer D.
+      - name: "et al."
+    journal: "Science"
+    doi: "10.1126/science.aea6425"
+    year: 2025
+  - type: article
+    title: "Toroidal topology of population activity in grid cells"
+    authors:
+      - family-names: Gardner
+        given-names: Richard J.
+      - name: "et al."
+    journal: "Nature"
+    volume: 602
+    doi: "10.1038/s41586-021-04268-7"
+    year: 2022
+  - type: article
+    title: "Ripser.py: a lean persistent homology library for Python"
+    authors:
+      - family-names: Tralie
+        given-names: Christopher
+      - family-names: Saul
+        given-names: Nathaniel
+      - family-names: Bar-On
+        given-names: Rann
+    journal: "Journal of Open Source Software"
+    volume: 3
+    doi: "10.21105/joss.00925"
+    year: 2018
