@@ -3,6 +3,7 @@ message: "If you use this work, please cite it as below."
 title: "MAG-S2: the shape of the quantum compass signal"
 type: software
 version: "0.1.0"
+doi: "10.5281/zenodo.24029865"
 repository-code: "https://github.com/nikabri88-cmd/quantum-compass-topology"
 authors:
   - family-names: Ryzhkova
