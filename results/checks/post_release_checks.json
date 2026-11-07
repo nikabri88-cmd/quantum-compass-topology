@@ -545,9 +545,9 @@
    0.0,
    0.0
   ],
-  "each_bird_upper_95": 0.012220974694293507,
-  "pooled_upper_95": 0.0012288708038254992,
-  "bird_as_unit_upper_95": 0.30849710781876083
+  "per_heading_error_upper_95_one_bird": 0.012220974694293507,
+  "per_heading_error_upper_95_pooled_independent": 0.0012288708038254992,
+  "share_of_birds_with_any_error_upper_95": 0.30849710781876083
  },
- "seconds": 336.7
+ "seconds": 364.0
 }
