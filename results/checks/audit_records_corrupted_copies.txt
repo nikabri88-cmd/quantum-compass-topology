@@ -1,0 +1,20 @@
+Two corrupted copies of the confirmatory run, built to reproduce the external review of v0.1.0.
+Copy 1: design.N25_noise0.25_rp.orientability_ratio of seed 3 set to NaN.
+Copy 2: conditions.rp_d0.shape of seed 4 set to 'sphere' while its stored bars give RP2.
+The frozen analyze.py keeps both runs valid and confirmatory (I5 ok); the audit added in v0.1.1 flags both.
+
+== copy: nan_design
+frozen analyze.py: run_valid True | confirmatory True | I5 ok | H1 hits 10
+audit_records.py:
+seed files: 10; numbers checked: 8786; labels derived again from bars: 160; design labels checked against their signature: 180
+PROBLEM seed_3.json: design.N25_noise0.25_rp.orientability_ratio is not finite (nan)
+problems: 1
+exit status 1
+
+== copy: flipped_label
+frozen analyze.py: run_valid True | confirmatory True | I5 ok | H1 hits 9
+audit_records.py:
+seed files: 10; numbers checked: 8786; labels derived again from bars: 160; design labels checked against their signature: 180
+PROBLEM seed_4.json: conditions.rp_d0: stored shape='sphere', derived from the bars 'rp2'
+problems: 1
+exit status 1

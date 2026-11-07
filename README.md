@@ -2,20 +2,20 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24029865.svg)](https://doi.org/10.5281/zenodo.24029865)
 
-A pre-registered simulation study of what the joint activity of neurons looks like when they read a radical-pair (cryptochrome) magnetic compass. It predicts that the population lies on the real projective plane RP², while a polarity-sensitive compass read by the same eyes and neurons gives a sphere S². The two shapes can be told apart in population recordings taken while three-axis coils rotate the field, without knowing what each neuron encodes.
+A simulation study of what the joint activity of neurons looks like when they read a radical-pair (cryptochrome) magnetic compass. It predicts that the population lies on the real projective plane RP², while a polarity-sensitive compass read by the same eyes and neurons gives a sphere S². The two shapes can be told apart in population recordings taken while three-axis coils rotate the field, without knowing what each neuron encodes.
 
 Author: Julia Ryzhkova (Siriona, siriona.one; ORCID 0009-0005-4194-6059).
-Status: version 0.1 complete, 7 November 2026. The protocol, code, physics and thresholds were frozen before the confirmatory run, and the run with its verdicts is included. Archived on Zenodo: https://doi.org/10.5281/zenodo.24029865 (release v0.1.0).
+Status: version 0.1.1, 7 November 2026. The protocol, code, physics and thresholds were frozen before the confirmatory run, and the run with its verdicts is included. The freeze was internal, and the first public record of the study is the release v0.1.0 with its results. Version 0.1.1 adds the corrections of an external review, listed in «Review after release». Archived on Zenodo: release v0.1.0, https://doi.org/10.5281/zenodo.24029865.
 
 ![A radical-pair compass glues n and −n and gives RP²; a polar sensor keeps them apart and gives a sphere](figures/rp2_vs_sphere.svg)
 
 ## The prediction
 
-A radical pair responds in the same way to a field n and to the reversed field −n: its singlet yield is an even function of the field direction, Φ(n) = Φ(−n). Every cryptochrome signal, and every neuron that sums such signals, is therefore an even function of n as well. The population then has one state for each axis of the field, and its states form a sphere with opposite points glued together, the real projective plane RP². A sensor that feels polarity, such as a response proportional to the projection of the field on the receptor axis, keeps n and −n apart and gives a sphere.
+A radical pair responds in the same way to a field n and to the reversed field −n: its singlet yield is an even function of the field direction, Φ(n) = Φ(−n). Every cryptochrome signal, and every neuron that sums such signals, is therefore an even function of n as well, so the population takes one state for each axis of the field. When the readout also tells all axes apart, these states form a sphere with opposite points glued together, the real projective plane RP². This second condition depends on the eye and the neurons: a single axial signal such as n_z² folds the axes onto a segment. In the model the yield is a quadratic form of the direction up to 3·10⁻⁵ of its anisotropic power, quadratic forms without their trace span five dimensions, and the readout from these five dimensions to the neuron inputs has full rank 5 in all ten simulated birds (`results/checks/post_release_checks.json`). A sensor that feels polarity, such as a response proportional to the projection of the field on the receptor axis, keeps n and −n apart and gives a sphere when its readout has rank 3, which also holds in all ten birds.
 
 Persistent homology separates the two shapes. With Z₂ coefficients RP² has one loop and one cavity (Betti numbers b₁ = 1, b₂ = 1), and with Z₃ coefficients both vanish. A sphere has one cavity under both fields. The pipeline reads orientability from the longest H₂ bar, which keeps its length under Z₃ only on an orientable surface.
 
-Four hypotheses were registered:
+Four hypotheses were fixed before the run:
 
 - **H1.** With the intact compass and three-dimensional field rotations, the population is labelled RP² in at least 8 of 10 simulated birds.
 - **H2.** The polar control, read by the same eyes and neurons, is labelled a sphere in at least 8 of 10.
@@ -47,9 +47,13 @@ Under yaw rotations the field traces one circle on the sphere of directions, and
 
 ![Yaw rotations at inclination 66° and at the magnetic equator](figures/yaw_equator.svg)
 
+At inclination 66° no bird made a heading error larger than 90° in any of its 300 test headings. The frozen t-interval over the ten zero shares is [0; 0], and its zero width understates the uncertainty. Exact 95% upper bounds are 0.012 for each bird, 0.0012 for all 3000 test headings pooled, and 0.31 for the share of birds that would make such an error when the bird is taken as the only independent unit (`results/checks/post_release_checks.json`). The next protocol will register an interval for proportions that accounts for the grouping of test headings by bird.
+
+Together these results show that, in the chosen model of the retina and the neural readout, the pipeline tells the RP² and S² signatures apart reliably at the noise levels of the run. For real neural recordings the shape remains an experimental prediction.
+
 ### Exploratory results
 
-**E1, radio-frequency dose.** The disruption compresses the yield pattern towards its mean by a factor 1 − d, while the noise of each neuron stays unchanged.
+**E1, radio-frequency dose.** The disruption compresses the yield pattern towards its mean by a factor 1 − d, while the noise of each neuron stays unchanged. The labels therefore show the dose at which the pipeline stops detecting the shape at this noise. For any d < 1 the noiseless population keeps an invertible map from the field axes, and without neural noise it receives the RP² label at d = 0.75 and d = 0.9 in all ten birds (`results/checks/post_release_checks.json`).
 
 | d | Labels of the compass over 10 birds |
 |---|---|
@@ -76,10 +80,10 @@ RP² needs more neurons and less noise than the sphere. At a single-neuron signa
 1. Record population activity of tens of neurons or more in a brain area that carries compass information, for example Cluster N, which European robins need for magnetic compass orientation (Zapka et al. 2009).
 2. Rotate a field of geomagnetic strength over many directions in the head frame with three-axis coils.
 3. Run the frozen pipeline: z-score, six principal components, persistent homology with Z₂ and Z₃, the calibrated thresholds and the orientability ratio.
-4. Repeat the rotations under broadband radio-frequency noise on both sides of the upper frequency bound of about 116 MHz predicted for a flavin–tryptophan radical pair: blackcaps lose magnetic orientation in noise at 75–85 MHz and keep it at 140–150 MHz (Leberecht et al. 2023). For a radical-pair compass the model predicts that strong enough noise below the bound collapses RP² to a point (E1), while noise above it leaves RP² intact.
+4. Repeat the rotations under broadband radio-frequency noise on both sides of the upper frequency bound of about 116 MHz predicted for a flavin–tryptophan radical pair: blackcaps lose magnetic orientation in noise at 75–85 MHz and keep it at 140–150 MHz (Leberecht et al. 2023). In the model, strong enough noise below the bound makes RP² undetectable for the pipeline at a fixed neural noise (E1), while noise above the bound leaves the population unchanged. The frequency selectivity itself is an assumption of the model taken from Leberecht et al. (2023), and I4 checks that the code implements it.
 5. As a simpler test, use a horizontal field: an axial compass makes the population confuse headings ψ and ψ + 180° (H4).
 
-RP² by itself identifies an axial readout, and any axial sensor would produce it; some magnetite receptors are axial as well (Winklhofer & Kirschvink 2010). The frequency-selective radio-frequency control is what ties the shape to a radical pair. A sphere identifies a polarity-sensitive input. The vestibular magnetic pathway of pigeons is a natural place to look for one: its neurons are tuned to field polarity under three-axis coil rotations (Wu & Dickman 2012), and Nordmann et al. (2025) trace magnetically induced activity in the pigeon brain to the vestibular system and to electromagnetic induction, whose voltage changes sign when the field reverses. The polar control also predicts a sphere for compass neurons of animals with a polarity compass, such as mole-rats (Marhold, Wiltschko & Burda 1997). Head-direction cells of birds (Ben-Yishay et al. 2021; Takahashi et al. 2022) are another place to record.
+RP² by itself identifies an axial readout, and any axial sensor whose readout tells all axes apart would produce it; some magnetite receptors are axial as well (Winklhofer & Kirschvink 2010). The frequency-selective radio-frequency control is what ties the shape to a radical pair. A sphere identifies a polarity-sensitive input. The vestibular magnetic pathway of pigeons is a natural place to look for one: its neurons are tuned to field polarity under three-axis coil rotations (Wu & Dickman 2012), and Nordmann et al. (2025) trace magnetically induced activity in the pigeon brain to the vestibular system and to electromagnetic induction, whose voltage changes sign when the field reverses. The polar control also predicts a sphere for compass neurons of animals with a polarity compass, such as mole-rats (Marhold, Wiltschko & Burda 1997). Head-direction cells of birds (Ben-Yishay et al. 2021; Takahashi et al. 2022) are another place to record.
 
 ## Related work and what is new
 
@@ -89,7 +93,7 @@ A search of the literature, preprint servers, research registries and public cod
 - **Radical pairs in the eye.** Models of cryptochrome in the retina describe the pattern the field casts on the eye (Ritz, Adem & Schulten 2000) and how precisely the field direction can be read from it (Solov'yov, Mouritsen & Schulten 2010; Ren, Hiscock & Hore 2021). Radio-frequency disruption of the compass was shown by Ritz et al. (2004) and Engels et al. (2014), and the upper frequency bound comes from Leberecht et al. (2023).
 - **Topology of neural codes.** Persistent homology recovers a ring in the activity of head-direction cells (Chaudhuri et al. 2019) and a torus in grid cells (Gardner et al. 2022), and earlier work asked how many neurons and what firing and noise conditions such analyses need in spatial codes (Dabaghian et al. 2012; Kang, Xu & Morozov 2021). Comparing Z₂ and Z₃ coefficients to recognise the projective plane is standard in computational topology (Hatcher 2002; Perea 2018).
 
-MAG-S2 adds the link between these parts: the prediction that the symmetry Φ(n) = Φ(−n) of the radical pair places the compass population on RP² while a polarity-sensitive input gives S², a pre-registered test of this prediction through model eyes and neurons with an atlas-gated pipeline, an orientability readout from the ratio of the longest H₂ bars under Z₃ and Z₂, and a map of the neurons and noise levels at which RP² stays recognisable.
+MAG-S2 adds the link between these parts: the prediction that the symmetry Φ(n) = Φ(−n) of the radical pair, together with a readout that tells the axes apart, places the compass population on RP² while a polarity-sensitive input gives S², a test of this prediction fixed before the run through model eyes and neurons with an atlas-gated pipeline, an orientability readout from the ratio of the longest H₂ bars under Z₃ and Z₂, and a map of the neurons and noise levels at which RP² stays recognisable.
 
 ## Model
 
@@ -133,10 +137,22 @@ The two threshold factors were calibrated on the atlas alone (seeds 1001–1010)
 - **Blind pipeline test.** A full run and analysis on seeds 9201–9202 with the frozen code, checked only for completeness, invariants and metadata; the outputs were deleted unseen.
 - **Independent review.** A reviewer without access to the compass shapes read and tested the code, confirmed the physics, the geometry, the random streams, the atlas and the calibration, and listed points to improve. These points (validity rules and provenance checks in the analysis, completeness checks, boundary tests, noise-matched gate rings for H3, a stricter physics check, a smoke test on a non-confirmatory seed, one BLAS thread, an empty output folder for runs) were fixed and verified in a second round. The full list is in the protocol, section «Код».
 
+## Review after release (v0.1.1)
+
+An independent reviewer checked version 0.1.0 (commit 7cd8e31). The reviewer ran the 118 tests, recomputed `physics.json` and the full seed 1 from scratch, analysed the stored seeds 1–10 again and derived every label again from the stored bars, and obtained byte-identical files and consistent labels throughout. Six points led to version 0.1.1. The frozen protocol, code, run and verdicts are unchanged; each change corrects wording, adds a check or adds a limitation.
+
+1. **Symmetry and the readout.** Field-reversal symmetry places the population on RP² only when the readout also tells all axes apart. The prediction now states this condition, and `scripts/post_release_checks.py` shows that it holds in the model: the readout of the quadratic part of the yield has rank 5 in all ten birds, and the polar readout has rank 3.
+2. **Chirality-induced spin selectivity.** A new limitation restricts the prediction to radical-pair models that are symmetric under field reversal and cites the theory (Luo & Hore 2021) and the recent EPR study (Kobori et al. 2026) that point to an asymmetry.
+3. **Radio-frequency dose.** At d = 0.75 the shape becomes undetectable for the pipeline at fixed neural noise, while the noiseless population keeps the RP² label in all ten birds. E1 and the test plan now say so, and the frequency selectivity is named as a model assumption that I4 checks in the code.
+4. **Interval at 66°.** The frozen t-interval [0; 0] has zero width. The results now give exact bounds under three readings of the dependence between test headings, and the next protocol will register a cluster-aware interval.
+5. **Checks of the records.** The frozen analysis accepts a run with a non-finite nested field or with a label that contradicts its stored bars, as the reviewer showed on altered copies. `scripts/audit_records.py` checks every number and derives every label again from its bars. The published run passes it with no problems, and both altered copies are flagged (`results/checks/audit_records_confirmatory_run_v01.txt`, `results/checks/audit_records_corrupted_copies.txt`). The next protocol will include these checks in its analysis.
+6. **Registration.** The freeze before the run was internal, and the first public record of the study is the release with its results. The hashes show that the published files agree with one another and with the run, and the order of freeze and run rests on the protocol and its revision history kept by the author. The text now describes the study as frozen before the run, and the next study will publish its hashes before its run.
+
 ## Limitations
 
-- **Minimal radical pair.** The model has three nitrogen nuclei, with relaxation, exchange and dipolar coupling set to zero, and the anisotropy of the yield reaches 21%, while realistic models give a few percent. The shape rests on the symmetry under field reversal, which holds for any set of nuclei and any bilinear interactions; the size of the effect enters through the signal-to-noise ratio, which the model sets directly. The requirements map therefore has to be translated into numbers of neurons through the real signal-to-noise ratio of compass neurons.
-- **Radio-frequency noise** is modelled as a compression of the yield pattern; a model with an oscillating field in the spin dynamics would give the dose for a given noise amplitude.
+- **Minimal radical pair.** The model has three nitrogen nuclei, with relaxation, exchange and dipolar coupling set to zero, and the anisotropy of the yield reaches 21%, while realistic models give a few percent. The shape rests on the symmetry under field reversal, which holds for any set of nuclei and any bilinear spin interactions in a pair born in the singlet state; the size of the effect enters through the signal-to-noise ratio, which the model sets directly. The requirements map therefore has to be translated into numbers of neurons through the real signal-to-noise ratio of compass neurons.
+- **Field-inversion symmetry.** The prediction holds for radical-pair models whose yield is symmetric under field reversal, as in the model here. Chirality-induced spin selectivity can break this symmetry (Luo & Hore 2021), and time-resolved EPR on cryptochrome-DASH of *Xenopus laevis* at −153 °C to −33 °C, interpreted with simulations that include it, predicts responses that differ under field reversal (Kobori et al. 2026). How this carries over to a working compass in a living bird remains open; behavioural experiments so far agree with a symmetric compass, as Luo & Hore (2021) note. In the terms of this model, a small asymmetry keeps n and −n close but apart, so the pipeline would read RP² while the asymmetry stays well below the neural noise and a sphere once it clearly exceeds it.
+- **Radio-frequency noise** is modelled as a compression of the yield pattern, and its frequency selectivity is an assumption of the model; a model with an oscillating field in the spin dynamics would give the dose for a given noise amplitude and frequency.
 - **Eye.** The retina is two spherical caps, and the cryptochromes are ordered along the photoreceptor axis; their real orientation in the outer segments remains to be measured.
 - **Neurons.** The readout is abstract; in the brain the magnetic signal mixes with vision and heading, and neurons that carry it in clean form remain to be found.
 - **Full sphere of directions.** The shape appears when the field covers all directions relative to the head, which in an experiment calls for three-axis coils.
@@ -155,9 +171,11 @@ python3 -I mag_s2.py physics --out OUT_PHYS                      # rewrites code
 python3 -I mag_s2.py calibrate --seeds 1001-1010 --out OUT_CAL   # atlas calibration (about 5 minutes)
 python3 -I mag_s2.py run --seeds 1-10 --out NEW_RUN --workers 2  # the confirmatory run (about 15–20 minutes on two cores)
 python3 -I ../scripts/make_figures.py 1                          # the barcode figure
+python3 -I ../scripts/audit_records.py ../results/confirmatory_run_v01   # every number finite, every label derived again from its bars
+python3 -I ../scripts/post_release_checks.py                     # readout rank, noiseless dose, exact bounds at 66° (about 6 minutes)
 ```
 
-The code sets BLAS to one thread before NumPy loads. Reruns are bitwise identical on the same BLAS build and CPU kernel; the frozen run used OpenBLAS 0.3.31 and 0.3.34 with the SkylakeX kernel, Python 3.13.18, NumPy 2.5.3, SciPy 1.18.1, RadicalPy 1.0.9 and Ripser 0.6.15. `SHA256SUMS.txt` lists every file of the release; verify with `sha256sum -c SHA256SUMS.txt`. The frozen files and the run outputs also have their own lists, `code/SHA256SUMS` and `results/SHA256SUMS`.
+The code sets BLAS to one thread before NumPy loads. Reruns are bitwise identical on the same BLAS build and CPU kernel; the frozen run used OpenBLAS 0.3.31 and 0.3.34 with the SkylakeX kernel, Python 3.13.18, NumPy 2.5.3, SciPy 1.18.1, RadicalPy 1.0.9 and Ripser 0.6.15. `SHA256SUMS.txt` lists every file of the release; verify with `sha256sum -c SHA256SUMS.txt`. The frozen code and the results of v0.1.0 also have their own lists, `code/SHA256SUMS` and `results/SHA256SUMS`.
 
 | File | SHA-256 |
 |---|---|
@@ -170,15 +188,16 @@ The code sets BLAS to one thread before NumPy loads. Reruns are bitwise identica
 
 ## Files
 
-- `protocol/MAG-S2_protocol_v0.1_ru.md` – the pre-registered protocol with calibration history, review, results and sources (Russian)
+- `protocol/MAG-S2_protocol_v0.1_ru.md` – the protocol frozen before the run, with calibration history, review, results and sources (Russian)
 - `code/mag_s2.py` – physics, eyes, neurons, atlas, topology pipeline, calibration, smoke test and runs
 - `code/analyze.py` – the frozen analysis: invariants, expectations, hypotheses, validity and provenance
 - `code/test_analyze.py` – synthetic tests of the analysis
 - `code/physics.json` – the computed yield pattern and the physics invariants
 - `results/confirmatory_run_v01/` – seed files of birds 1–10, run metadata, log and `results.json`
 - `results/calibration/` – the three calibration rounds and the reproduction with the frozen code
-- `results/checks/` – blind pipeline test, smoke test and mutation testing of the analysis
+- `results/checks/` – blind pipeline test, smoke test and mutation testing of the analysis; since v0.1.1 also the audit of the records and the post-release checks
 - `scripts/make_figures.py`, `scripts/mutate_analyze.py` – the barcode figure and the mutation harness
+- `scripts/audit_records.py`, `scripts/post_release_checks.py` – the record audit and the checks added after the external review (v0.1.1)
 - `figures/` – schematic figures and the barcode figure
 - `requirements.txt` – package versions of the frozen run
 - `SHA256SUMS.txt` – SHA-256 of every file in the release
@@ -203,7 +222,9 @@ See also `CITATION.cff`.
 - Gardner R. J. et al. 2022. Toroidal topology of population activity in grid cells. Nature 602: 123–128. https://doi.org/10.1038/s41586-021-04268-7
 - Hatcher A. 2002. Algebraic Topology. Cambridge University Press. https://pi.math.cornell.edu/~hatcher/AT/ATpage.html
 - Kang L., Xu B., Morozov D. 2021. Evaluating state space discovery by persistent cohomology in the spatial representation system. Frontiers in Computational Neuroscience 15: 616748. https://doi.org/10.3389/fncom.2021.616748
+- Kobori Y., Hamada M., Iwata T., Nagashima H., Fuki M., Kandori H., Weber S. 2026. Chirality-induced spin selectivity in photoinduced charge-separations of cryptochrome: potential role in magnetoreception. The Journal of Physical Chemistry Letters. https://doi.org/10.1021/acs.jpclett.6c02747
 - Leberecht B. et al. 2023. Upper bound for broadband radiofrequency field disruption of magnetic compass orientation in night-migratory songbirds. PNAS 120: e2301153120. https://doi.org/10.1073/pnas.2301153120
+- Luo J., Hore P. J. 2021. Chiral-induced spin selectivity in the formation and recombination of radical pairs: cryptochrome magnetoreception and EPR detection. New Journal of Physics 23: 043032. https://doi.org/10.1088/1367-2630/abed0b
 - Marhold S., Wiltschko W., Burda H. 1997. A magnetic polarity compass for direction finding in a subterranean mammal. Naturwissenschaften 84: 421–423.
 - Nordmann G. C., Balay S. D., Kapuruge T. N., Numi M., Leeb C., Nimpf S., Malkemper E. P., Landler L., Keays D. A. 2025. A global screen for magnetically induced neuronal activity in the pigeon brain. Science. https://doi.org/10.1126/science.aea6425
 - Perea J. A. 2018. Multiscale projective coordinates via persistent cohomology of sparse filtrations. Discrete & Computational Geometry 59: 175–225. https://doi.org/10.1007/s00454-017-9927-2

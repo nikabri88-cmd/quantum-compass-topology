@@ -1,7 +1,7 @@
 {
   "title": "MAG-S2: the shape of the quantum compass signal",
   "upload_type": "software",
-  "description": "Pre-registered simulation study of the shape of neural population activity that reads a radical-pair (cryptochrome) magnetic compass. The singlet yield of a radical pair is the same for a field and for the reversed field, so every cryptochrome signal and every neuron that sums such signals is an even function of the field direction, and the population lies on the real projective plane RP². A polarity-sensitive control read by the same eyes and neurons gives a sphere. Persistent homology with Z₂ and Z₃ coefficients tells the two shapes apart in recordings taken while three-axis coils rotate the field, without knowing what each neuron encodes. The protocol, code, physics and thresholds were frozen before the confirmatory run. In the confirmatory run on ten simulated birds (seeds 1–10, 7 November 2026) all invariants held and all expectations and hypotheses were met: the intact compass was labelled RP² in 10 of 10 birds, the polar control a sphere in 10 of 10, head rotations about the vertical axis a ring in 10 of 10 at inclination 66° and at the magnetic equator, and a nearest-neighbour heading decoder confused headings 180° apart at the equator (share of errors larger than 90° equal to 0.493, 95% interval 0.473–0.512) and kept them apart at inclination 66° (share 0). The release holds the frozen protocol (in Russian), the code with its synthetic tests, the computed physics, the confirmatory run with its verdicts, the calibration records, the pre-run checks and the figures. Licensing: code is released under MIT; text, figures, the protocol and the results are released under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).",
+  "description": "Simulation study of the shape of neural population activity that reads a radical-pair (cryptochrome) magnetic compass. The singlet yield of a radical pair is the same for a field and for the reversed field, so every cryptochrome signal and every neuron that sums such signals is an even function of the field direction, and when the readout also tells all field axes apart, the population lies on the real projective plane RP². A polarity-sensitive control read by the same eyes and neurons gives a sphere. Persistent homology with Z₂ and Z₃ coefficients tells the two shapes apart in recordings taken while three-axis coils rotate the field, without knowing what each neuron encodes. The protocol, code, physics and thresholds were frozen before the confirmatory run; the freeze was internal, and the first public record of the study is release v0.1.0 with its results. In the confirmatory run on ten simulated birds (seeds 1–10, 7 November 2026) all invariants held and all expectations and hypotheses were met: the intact compass was labelled RP² in 10 of 10 birds, the polar control a sphere in 10 of 10, head rotations about the vertical axis a ring in 10 of 10 at inclination 66° and at the magnetic equator, and a nearest-neighbour heading decoder confused headings 180° apart at the equator (share of errors larger than 90° equal to 0.493, 95% interval 0.473–0.512) and kept them apart at inclination 66° (share 0). Version 0.1.1 adds the corrections of an external review of version 0.1.0 (DOI 10.5281/zenodo.24029865): the readout condition for RP² with a check that it holds in all ten birds, a limitation for radical-pair models with chirality-induced spin selectivity, the reading of the radio-frequency dose as detectability at fixed neural noise, exact bounds for the heading errors at inclination 66°, and an audit of the records that derives every label again from its bars; the frozen protocol, code, run and verdicts are unchanged. The release holds the frozen protocol (in Russian), the code with its synthetic tests, the computed physics, the confirmatory run with its verdicts, the calibration records, the pre-run checks, the post-release checks and the figures. Licensing: code is released under MIT; text, figures, the protocol and the results are released under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).",
   "creators": [
     {
       "name": "Ryzhkova, Julia",
@@ -18,12 +18,18 @@
     "topological data analysis",
     "neural manifold",
     "projective plane",
-    "pre-registration",
-    "simulation"
+    "simulation",
+    "population coding"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "language": "eng",
   "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24029865",
+      "relation": "isNewVersionOf",
+      "resource_type": "software",
+      "scheme": "doi"
+    },
     {
       "identifier": "10.1073/pnas.2301153120",
       "relation": "references",
@@ -64,6 +70,18 @@
       "identifier": "10.21105/joss.00925",
       "relation": "references",
       "resource_type": "software",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1088/1367-2630/abed0b",
+      "relation": "references",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1021/acs.jpclett.6c02747",
+      "relation": "references",
+      "resource_type": "publication-article",
       "scheme": "doi"
     }
   ],

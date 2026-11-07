@@ -2,8 +2,11 @@ cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
 title: "MAG-S2: the shape of the quantum compass signal"
 type: software
-version: "0.1.0"
-doi: "10.5281/zenodo.24029865"
+version: "0.1.1"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24029865"
+    description: "Version 0.1.0"
 repository-code: "https://github.com/nikabri88-cmd/quantum-compass-topology"
 authors:
   - family-names: Ryzhkova
@@ -13,14 +16,17 @@ authors:
 date-released: 2026-11-07
 license: MIT
 abstract: >-
-  Pre-registered simulation study of the shape of neural population activity that reads a radical-pair
-  (cryptochrome) magnetic compass. The singlet yield of a radical pair is the same for a field and for the reversed
-  field, so the population lies on the real projective plane RP2, while a polarity-sensitive control read by the
+  Simulation study of the shape of neural population activity that reads a radical-pair (cryptochrome) magnetic
+  compass, with the protocol, code and thresholds frozen before the confirmatory run. The singlet yield of a radical
+  pair is the same for a field and for the reversed field, so when the readout tells all field axes apart the
+  population lies on the real projective plane RP2, while a polarity-sensitive control read by the
   same eyes and neurons gives a sphere. Persistent homology with Z2 and Z3 coefficients tells the two shapes apart.
   In the confirmatory run on ten simulated birds all invariants held and all expectations and hypotheses were met:
   the intact compass was labelled RP2 in 10 of 10 birds, the polar control a sphere in 10 of 10, head rotations about
   the vertical axis a ring in 10 of 10 at inclination 66 degrees and at the magnetic equator, and a heading decoder
-  confused headings 180 degrees apart at the equator and kept them apart at inclination 66 degrees. Code is released
+  confused headings 180 degrees apart at the equator and kept them apart at inclination 66 degrees. Version 0.1.1
+  adds the corrections of an external review of version 0.1.0; the frozen protocol, code, run and verdicts are
+  unchanged. Code is released
   under MIT; text, figures, the protocol and the results are released under CC BY 4.0.
 keywords:
   - magnetoreception
@@ -30,7 +36,7 @@ keywords:
   - topological data analysis
   - neural manifold
   - projective plane
-  - pre-registration
+  - population coding
   - simulation
 references:
   - type: article
