@@ -7,6 +7,9 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.24029865"
     description: "Version 0.1.0"
+  - type: doi
+    value: "10.5281/zenodo.24030218"
+    description: "Version 0.1.1"
 repository-code: "https://github.com/nikabri88-cmd/quantum-compass-topology"
 authors:
   - family-names: Ryzhkova

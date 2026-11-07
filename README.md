@@ -1,11 +1,11 @@
 # MAG-S2: the shape of the quantum compass signal
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24029865.svg)](https://doi.org/10.5281/zenodo.24029865)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24030218.svg)](https://doi.org/10.5281/zenodo.24030218)
 
 A simulation study of what the joint activity of neurons looks like when they read a radical-pair (cryptochrome) magnetic compass. It predicts that the population lies on the real projective plane RP², while a polarity-sensitive compass read by the same eyes and neurons gives a sphere S². In the model the two shapes can be told apart in population activity recorded while three-axis coils rotate the field, without knowing what each neuron encodes; in living birds this remains a prediction to test.
 
 Author: Julia Ryzhkova (Siriona, siriona.one; ORCID 0009-0005-4194-6059).
-Status: version 0.1.2, 7 November 2026. The protocol, code, physics and thresholds were frozen before the confirmatory run, and the run with its verdicts is included. The freeze was internal, and the first public record of the study is the release v0.1.0 with its results. Version 0.1.1 adds the corrections of an external review, and version 0.1.2 adds the clarifications of its second check; both are listed in «Review after release». Archived on Zenodo: release v0.1.0, https://doi.org/10.5281/zenodo.24029865.
+Status: version 0.1.2, 7 November 2026. The protocol, code, physics and thresholds were frozen before the confirmatory run, and the run with its verdicts is included. The freeze was internal, and the first public record of the study is the release v0.1.0 with its results. Version 0.1.1 adds the corrections of an external review, and version 0.1.2 adds the clarifications of its second check; both are listed in «Review after release». Archived on Zenodo: release v0.1.0, https://doi.org/10.5281/zenodo.24029865; release v0.1.1, https://doi.org/10.5281/zenodo.24030218.
 
 ![A radical-pair compass glues n and −n and gives RP²; a polar sensor keeps them apart and gives a sphere](figures/rp2_vs_sphere.svg)
 
@@ -214,7 +214,7 @@ Code (`code/*.py`, `scripts/*.py`) is released under the MIT License. Text, figu
 
 ## Citation
 
-Ryzhkova, J. (2026). MAG-S2: the shape of the quantum compass signal (v0.1.0). Zenodo. https://doi.org/10.5281/zenodo.24029865
+Ryzhkova, J. (2026). MAG-S2: the shape of the quantum compass signal (v0.1.1). Zenodo. https://doi.org/10.5281/zenodo.24030218
 
 See also `CITATION.cff`.
 
