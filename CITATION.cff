@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
 title: "MAG-S2: the shape of the quantum compass signal"
 type: software
-version: "0.1.1"
+version: "0.1.2"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.24029865"
@@ -24,9 +24,9 @@ abstract: >-
   In the confirmatory run on ten simulated birds all invariants held and all expectations and hypotheses were met:
   the intact compass was labelled RP2 in 10 of 10 birds, the polar control a sphere in 10 of 10, head rotations about
   the vertical axis a ring in 10 of 10 at inclination 66 degrees and at the magnetic equator, and a heading decoder
-  confused headings 180 degrees apart at the equator and kept them apart at inclination 66 degrees. Version 0.1.1
-  adds the corrections of an external review of version 0.1.0; the frozen protocol, code, run and verdicts are
-  unchanged. Code is released
+  confused headings 180 degrees apart at the equator and kept them apart at inclination 66 degrees. Versions 0.1.1
+  and 0.1.2 add the corrections of an external review of version 0.1.0 and the clarifications of its second check;
+  the frozen protocol, code, run and verdicts are unchanged. Code is released
   under MIT; text, figures, the protocol and the results are released under CC BY 4.0.
 keywords:
   - magnetoreception

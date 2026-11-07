@@ -15,8 +15,11 @@ B. Radio-frequency dose without neural noise. The noiseless population at d = 0.
    classifier. For d < 1 the compression keeps the noiseless map invertible, so the E1 labels at d = 0.75 measure
    what the pipeline can detect at fixed neural noise.
 C. Exact bounds for the heading errors at inclination 66 degrees. The frozen t-interval over ten zero shares has
-   zero width. The script gives Clopper-Pearson bounds under three readings of the dependence between test
-   headings: every bird alone, all test headings pooled, and the bird as the only independent unit.
+   zero width. The script gives Clopper-Pearson upper bounds for two different quantities. For the error probability
+   of a single test heading it gives the bound from the 300 headings of one bird and the bound from all 3000 headings
+   pooled; the second assumes that headings are independent across birds. For the share of birds that would show at
+   least one error among their 300 test headings it gives the bound from 0 of 10 birds. A bound on the error
+   probability per heading that allows for differences between birds needs a model of those differences.
 
 Usage: python3 -I scripts/post_release_checks.py   (about 6 minutes; writes results/checks/post_release_checks.json)"""
 import json
@@ -104,9 +107,9 @@ def heading_bounds():
     assert all(x == 0.0 for x in shares)
     return dict(per_seed_share=shares, test_headings_per_bird=n_test, birds=len(shares),
                 frozen_t_interval=res["H4"]["confusion_66"]["ci"],
-                each_bird_upper_95=clopper_pearson_upper_for_zero(n_test),
-                pooled_upper_95=clopper_pearson_upper_for_zero(n_test * len(shares)),
-                bird_as_unit_upper_95=clopper_pearson_upper_for_zero(len(shares)))
+                per_heading_error_upper_95_one_bird=clopper_pearson_upper_for_zero(n_test),
+                per_heading_error_upper_95_pooled_independent=clopper_pearson_upper_for_zero(n_test * len(shares)),
+                share_of_birds_with_any_error_upper_95=clopper_pearson_upper_for_zero(len(shares)))
 
 
 def main():
@@ -130,8 +133,10 @@ def main():
         print(f"B noiseless {d}: " + ", ".join(f"{k} {labels.count(k)}" for k in sorted(set(labels))))
     hb = out["heading_errors_66"]
     print(f"C 66 degrees: 0 errors in {hb['birds']} x {hb['test_headings_per_bird']} test headings; frozen t-interval "
-          f"{hb['frozen_t_interval']}; exact 95% upper bounds: each bird {hb['each_bird_upper_95']:.4f}, pooled "
-          f"{hb['pooled_upper_95']:.5f}, bird as the unit {hb['bird_as_unit_upper_95']:.3f}")
+          f"{hb['frozen_t_interval']}; exact 95% upper bounds for the error probability per heading: one bird "
+          f"{hb['per_heading_error_upper_95_one_bird']:.4f}, pooled assuming independence "
+          f"{hb['per_heading_error_upper_95_pooled_independent']:.5f}; for the share of birds with any error "
+          f"{hb['share_of_birds_with_any_error_upper_95']:.3f}")
     print(f"written {os.path.relpath(path, ROOT)} in {out['seconds']} s")
 
 
