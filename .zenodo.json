@@ -95,6 +95,18 @@
       "relation": "references",
       "resource_type": "publication-article",
       "scheme": "doi"
+    },
+    {
+      "identifier": "10.1063/1.5115445",
+      "relation": "references",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1021/jacs.2c06233",
+      "relation": "references",
+      "resource_type": "publication-article",
+      "scheme": "doi"
     }
   ],
   "publication_date": "2026-11-07"
