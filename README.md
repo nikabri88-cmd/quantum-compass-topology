@@ -47,7 +47,7 @@ Under yaw rotations the field traces one circle on the sphere of directions, and
 
 ![Yaw rotations at inclination 66° and at the magnetic equator](figures/yaw_equator.svg)
 
-At inclination 66° no bird made a heading error larger than 90° in any of its 300 test headings. The frozen t-interval over the ten zero shares is [0; 0], and its zero width understates the uncertainty. Exact 95% upper bounds are 0.012 for each bird, 0.0012 for all 3000 test headings pooled, and 0.31 for the share of birds that would make such an error when the bird is taken as the only independent unit (`results/checks/post_release_checks.json`). The next protocol will register an interval for proportions that accounts for the grouping of test headings by bird.
+At inclination 66° no bird made a heading error larger than 90° in any of its 300 test headings. The frozen t-interval over the ten zero shares is [0; 0], and its zero width understates the uncertainty. Exact 95% upper bounds are 0.012 for each bird, 0.0012 for all 3000 test headings pooled, and 0.31 for the share of birds that would make such an error when the bird is taken as the only independent unit (`results/checks/post_release_checks.json`). Under this strictest reading ten birds are too few to show the bound of 0.05 that H4 names. The next protocol will register an interval for proportions that accounts for the grouping of test headings by bird.
 
 Together these results show that, in the chosen model of the retina and the neural readout, the pipeline tells the RP² and S² signatures apart reliably at the noise levels of the run. For real neural recordings the shape remains an experimental prediction.
 
